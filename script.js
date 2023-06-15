@@ -22,7 +22,7 @@ let num1 = 0;
 let num2 = 0;
 let op = 0;
 
-function operate(op, num1, num2) {
+function operate(num1, op, num2) {
   if (op === "+") {
     return add(num1, num2);
   } else if (op === "-") {
@@ -35,19 +35,8 @@ function operate(op, num1, num2) {
     return "Error: Invalid operation";
   }
 }
-
-const button = document.querySelectorAll(".buttons");
-button.forEach((buttons) => {
-  addEventListener("click", () => {
-    updateDisplay(buttons.id);
-  });
-});
-
-const updateDisplay = (valueClicked) => {
-  displayValue += valueClicked;
-  displayArea.innerText += displayValue;
-};
-
 let displayValue = 0;
-let displayArea = document.getElementById("result-display");
-displayArea.innerHTML += displayValue;
+function updateDisplay(displayValue) {
+  let displayArea = document.getElementById("result-display");
+  displayArea.innerHTML += displayValue;
+}
