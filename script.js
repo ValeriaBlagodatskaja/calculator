@@ -1,26 +1,26 @@
-function add(x, y) {
-  return x + y;
+function add(num1, num2) {
+  return num1 + num2;
 }
 
-function substract(x, y) {
-  return x - y;
+function substract(num1, num2) {
+  return num1 - num2;
 }
 
-function multiply(x, y) {
-  return x * y;
+function multiply(num1, num2) {
+  return num1 * num2;
 }
 
-function divide(x, y) {
-  if (b != 0) {
-    return x / y;
+function divide(num1, num2) {
+  if (num2 != 0 || num1 != 0) {
+    return num1 / num2;
   } else {
     return "Error: Cannot divide by zero";
   }
 }
 
-let firstNumber = num1;
-let secondNumber = num2;
-let operator = op;
+let num1 = 0;
+let num2 = 0;
+let op = 0;
 
 function operate(op, num1, num2) {
   if (op === "+") {
@@ -35,3 +35,19 @@ function operate(op, num1, num2) {
     return "Error: Invalid operation";
   }
 }
+
+const button = document.querySelectorAll(".buttons");
+button.forEach((buttons) => {
+  addEventListener("click", () => {
+    updateDisplay(buttons.id);
+  });
+});
+
+const updateDisplay = (valueClicked) => {
+  displayValue += valueClicked;
+  displayArea.innerText += displayValue;
+};
+
+let displayValue = 0;
+let displayArea = document.getElementById("result-display");
+displayArea.innerHTML += displayValue;
