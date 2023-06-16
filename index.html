@@ -6,7 +6,7 @@
     <meta name="description" content="This is a sample web page." />
     <meta name="author" content="Your Name" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <div class="calculator">
@@ -17,22 +17,22 @@
         <button>AC</button>
         <button>DEL</button>
         <button>+/-</button>
-        <button>÷</button>
+        <button onclick="getOperator('÷')">÷</button>
         <button onclick="updateDisplay(7)">7</button>
         <button onclick="updateDisplay(8)">8</button>
         <button onclick="updateDisplay(9)">9</button>
-        <button>*</button>
+        <button onclick="getOperator('*')">*</button>
         <button onclick="updateDisplay(4)">4</button>
         <button onclick="updateDisplay(5)">5</button>
         <button onclick="updateDisplay(6)">6</button>
-        <button>-</button>
+        <button onclick="getOperator('-')">-</button>
         <button onclick="updateDisplay(1)">1</button>
         <button onclick="updateDisplay(2)">2</button>
         <button onclick="updateDisplay(3)">3</button>
-        <button>+</button>
+        <button onclick="getOperator('+')">+</button>
         <button onclick="updateDisplay(0)">0</button>
         <button>,</button>
-        <button class="wideButton">=</button>
+        <button class="wideButton" id="calc-button">=</button>
       </div>
     </div>
   </body>

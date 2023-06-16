@@ -18,25 +18,49 @@ function divide(num1, num2) {
   }
 }
 
-let num1 = 0;
-let num2 = 0;
-let op = 0;
-
-function operate(num1, op, num2) {
-  if (op === "+") {
+function calculate(num1, currentOperator, num2) {
+  if (currentOperator === "+") {
     return add(num1, num2);
-  } else if (op === "-") {
+  } else if (currentOperator === "-") {
     return substract(num1, num2);
-  } else if (op === "*") {
+  } else if (currentOperator === "*") {
     return multiply(num1, num2);
-  } else if (op === "/") {
+  } else if (currentOperator === "/") {
     return divide(num1, num2);
   } else {
     return "Error: Invalid operation";
   }
 }
-let displayValue = 0;
-function updateDisplay(displayValue) {
-  let displayArea = document.getElementById("result-display");
-  displayArea.innerHTML += displayValue;
+
+let currentOperator = null;
+let hasPressedOperator = false;
+let calcButton = document.getElementById("calc-button");
+let displayArea = document.getElementById("result-display");
+let prevValue = "";
+
+function updateDisplay(buttonValue) {
+  prevValue = displayArea.innerHTML;
+
+  if (hasPressedOperator) {
+    displayArea.innerHTML = "";
+    hasPressedOperator = false;
+  }
+
+  displayArea.innerHTML += buttonValue;
 }
+
+function getOperator(operator) {
+  currentOperator = operator;
+  hasPressedOperator = true;
+  console.log(currentOperator);
+}
+calcButton.addEventListener("click", () => {
+  console.log("prevValue", prevValue);
+  console.log("current value", displayArea.innerHTML);
+  console.log("currentOperator", currentOperator);
+  displayArea.innerHTML = calculate(
+    parseFloat(prevValue),
+    currentOperator,
+    parseFloat(displayArea.innerHTML)
+  );
+});
