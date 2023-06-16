@@ -14,8 +14,8 @@
         <p id="result-display"></p>
       </div>
       <div class="buttons">
-        <button>AC</button>
-        <button>DEL</button>
+        <button onclick="deleteAll()">AC</button>
+        <button onclick="deleteOneValue()">DEL</button>
         <button>+/-</button>
         <button onclick="getOperator('÷')">÷</button>
         <button onclick="updateDisplay(7)">7</button>
@@ -31,7 +31,7 @@
         <button onclick="updateDisplay(3)">3</button>
         <button onclick="getOperator('+')">+</button>
         <button onclick="updateDisplay(0)">0</button>
-        <button>,</button>
+        <button onclick="updateDisplay(',')">,</button>
         <button class="wideButton" id="calc-button">=</button>
       </div>
     </div>
