@@ -70,3 +70,7 @@ function deleteOneValue() {
 function deleteAll() {
   displayArea.innerHTML = "";
 }
+function addNegative() {
+  let currentValue = Number(displayArea.innerHTML);
+  return (displayArea.innerHTML = (-currentValue).toString());
+}
