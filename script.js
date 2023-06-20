@@ -19,6 +19,7 @@ function divide(num1, num2) {
 }
 
 function calculate(num1, currentOperator, num2) {
+  console.log(num1, currentOperator, num2);
   if (currentOperator === "+") {
     return add(num1, num2);
   } else if (currentOperator === "-") {
@@ -54,10 +55,13 @@ function getOperator(operator) {
   console.log(currentOperator);
 }
 calcButton.addEventListener("click", () => {
+  console.log(prevValue);
+  console.log(currentOperator);
+  console.log(displayArea.innerHTML);
   displayArea.innerHTML = calculate(
-    parseFloat(prevValue),
+    Number(prevValue),
     currentOperator,
-    parseFloat(displayArea.innerHTML)
+    Number(displayArea.innerHTML)
   );
 });
 function deleteOneValue() {
