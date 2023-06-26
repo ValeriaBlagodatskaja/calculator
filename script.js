@@ -1,3 +1,9 @@
+let currentOperator = null;
+let hasPressedOperator = false;
+let calcButton = document.getElementById("calc-button");
+let displayArea = document.getElementById("result-display");
+let prevValue = "";
+
 function add(num1, num2) {
   return num1 + num2;
 }
@@ -19,7 +25,7 @@ function divide(num1, num2) {
 }
 
 function calculate(num1, currentOperator, num2) {
-  console.log(num1, currentOperator, num2);
+  console.log("calculate:", num1, currentOperator, num2);
   if (currentOperator === "+") {
     return add(num1, num2);
   } else if (currentOperator === "-") {
@@ -32,12 +38,6 @@ function calculate(num1, currentOperator, num2) {
     return "Error: Invalid operation";
   }
 }
-
-let currentOperator = null;
-let hasPressedOperator = false;
-let calcButton = document.getElementById("calc-button");
-let displayArea = document.getElementById("result-display");
-let prevValue = "";
 
 function updateDisplay(buttonValue) {
   if (hasPressedOperator) {
@@ -54,22 +54,30 @@ function getOperator(operator) {
   prevValue += displayArea.innerHTML;
   console.log(currentOperator);
 }
+
 calcButton.addEventListener("click", () => {
   console.log(prevValue);
   console.log(currentOperator);
   console.log(displayArea.innerHTML);
-  displayArea.innerHTML = calculate(
+  const calcedValue = calculate(
     Number(prevValue),
     currentOperator,
     Number(displayArea.innerHTML)
   );
+  displayArea.innerHTML = calcedValue;
 });
+
 function deleteOneValue() {
   displayArea.innerHTML = displayArea.innerHTML.slice(0, -1);
 }
+
 function deleteAll() {
   displayArea.innerHTML = "";
+  prevValue = "";
+  currentOperator = null;
+  hasPressedOperator = null;
 }
+
 function addNegative() {
   let currentValue = Number(displayArea.innerHTML);
   return (displayArea.innerHTML = (-currentValue).toString());
