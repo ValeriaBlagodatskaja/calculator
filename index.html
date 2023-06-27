@@ -9,30 +9,32 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <div class="calculator">
-      <div class="display">
-        <p id="result-display"></p>
-      </div>
-      <div class="buttons">
-        <button onclick="deleteAll()">AC</button>
-        <button onclick="deleteOneValue()">DEL</button>
-        <button onclick="addNegative()">+/-</button>
-        <button onclick="updateDisplay('÷')">÷</button>
-        <button onclick="updateDisplay(7)">7</button>
-        <button onclick="updateDisplay(8)">8</button>
-        <button onclick="updateDisplay(9)">9</button>
-        <button onclick="updateDisplay('*')">*</button>
-        <button onclick="updateDisplay(4)">4</button>
-        <button onclick="updateDisplay(5)">5</button>
-        <button onclick="updateDisplay(6)">6</button>
-        <button onclick="updateDisplay('-')">-</button>
-        <button onclick="updateDisplay(1)">1</button>
-        <button onclick="updateDisplay(2)">2</button>
-        <button onclick="updateDisplay(3)">3</button>
-        <button onclick="updateDisplay('+')">+</button>
-        <button onclick="updateDisplay(0)">0</button>
-        <button onclick="updateDisplay('.')">.</button>
-        <button class="wideButton" id="calc-button">=</button>
+    <div class="main">
+      <div class="calculator">
+        <div class="display">
+          <p id="result-display"></p>
+        </div>
+        <div class="buttons">
+          <button id="AC" onclick="deleteAll()">AC</button>
+          <button id="DEL" onclick="deleteOneValue()">DEL</button>
+          <button id="negative" onclick="addNegative()">+/-</button>
+          <button id="divide" onclick="updateDisplay('/')">/</button>
+          <button onclick="updateDisplay(7)">7</button>
+          <button onclick="updateDisplay(8)">8</button>
+          <button onclick="updateDisplay(9)">9</button>
+          <button id="multiply" onclick="updateDisplay('*')">*</button>
+          <button onclick="updateDisplay(4)">4</button>
+          <button onclick="updateDisplay(5)">5</button>
+          <button onclick="updateDisplay(6)">6</button>
+          <button id="substract" onclick="updateDisplay('-')">-</button>
+          <button onclick="updateDisplay(1)">1</button>
+          <button onclick="updateDisplay(2)">2</button>
+          <button onclick="updateDisplay(3)">3</button>
+          <button id="add" onclick="updateDisplay('+')">+</button>
+          <button onclick="updateDisplay(0)">0</button>
+          <button id="decimal" onclick="updateDisplay('.')">.</button>
+          <button class="wideButton" id="calc-button">=</button>
+        </div>
       </div>
     </div>
   </body>
