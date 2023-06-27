@@ -12,7 +12,7 @@
     <div class="main">
       <div class="calculator">
         <div class="display">
-          <p id="result-display"></p>
+          <p class="displayText" id="result-display"></p>
         </div>
         <div class="buttons">
           <button id="AC" onclick="deleteAll()">AC</button>
@@ -31,9 +31,9 @@
           <button onclick="updateDisplay(2)">2</button>
           <button onclick="updateDisplay(3)">3</button>
           <button id="add" onclick="updateDisplay('+')">+</button>
-          <button onclick="updateDisplay(0)">0</button>
+          <button id="zero" onclick="updateDisplay(0)">0</button>
           <button id="decimal" onclick="updateDisplay('.')">.</button>
-          <button class="wideButton" id="calc-button">=</button>
+          <button id="calc-button">=</button>
         </div>
       </div>
     </div>

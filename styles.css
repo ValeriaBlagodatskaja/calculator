@@ -1,103 +1,127 @@
+body {
+  margin: 0;
+}
+
 .main {
   display: flex;
   justify-content: center;
   margin: 0;
   align-items: center;
   height: 100vh;
-  background-color: #fff3f0;
+  background-color: #e5e7e6;
+  text-decoration: white;
 }
 
 .calculator {
-  width: 400px;
+  width: 346px;
   border: 1px solid black;
-  padding: 24px;
+  padding: 0px;
   display: flex;
-  gap: 16px;
   flex-direction: column;
   border-radius: 16px;
   background-color: #080708;
+  box-shadow: 7px 2px 50px 5px black;
 }
 
 .display {
   width: 100%;
-  height: 60px;
-  background-color: paleturquoise;
+  height: 90px;
+  background-color: 282e38;
   border-radius: 16px;
-  text-align: end;
+  justify-content: end;
   font-size: 24px;
+  align-items: center;
+  display: flex;
+  color: white;
+}
+
+.displayText {
+  padding: 0 8px;
+  margin: 0;
 }
 
 .buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 2px;
 }
 
 .buttons button {
-  background-color: #48bf84;
-  width: 95px;
+  background-color: #2d3749;
+  width: 85px;
   height: 80px;
   border: none;
-  border-radius: 16px;
   font-size: 24px;
+  cursor: pointer;
+  transition: all, 0.3s;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.buttons .wideButton {
-  width: calc(95px * 2 + 6px);
-  background-color: #26f79d;
+#zero {
+  width: calc(85px * 2 + 2px);
+  border-bottom-left-radius: 16px;
 }
 #calc-button:hover {
-  background-color: #b8e1ff;
+  background-color: #9021ab;
 }
 
 button:hover {
-  background-color: #439775;
+  background-color: #55678b;
 }
 #AC {
-  background-color: #acfcd9;
+  background-color: #2d3749;
+  color: #cf76e5;
 }
 #AC:hover {
-  background-color: #086375;
+  background-color: #55678b;
 }
 #DEL {
-  background-color: #acfcd9;
+  background-color: #2d3749;
+  color: #cf76e5;
 }
 #DEL:hover {
-  background-color: #086375;
+  background-color: #55678b;
 }
 #decimal {
-  background-color: #acfcd9;
+  background-color: #2d3749;
 }
 #decimal:hover {
-  background-color: #086375;
+  background-color: #55678b;
 }
 #add {
-  background-color: #acfcd9;
+  background-color: #cf76e5;
 }
 #add:hover {
-  background-color: #086375;
+  background-color: #9021ab;
 }
 #substract {
-  background-color: #acfcd9;
+  background-color: #cf76e5;
 }
 #substract:hover {
-  background-color: #086375;
+  background-color: #9021ab;
 }
 #multiply {
-  background-color: #acfcd9;
+  background-color: #cf76e5;
 }
 #multiply:hover {
-  background-color: #086375;
+  background-color: #9021ab;
 }
 #divide {
-  background-color: #acfcd9;
+  background-color: #cf76e5;
 }
 #divide:hover {
-  background-color: #086375;
+  background-color: #9021ab;
 }
 #negative {
-  background-color: #acfcd9;
+  background-color: #2d3749;
+  color: #cf76e5;
 }
 #negative:hover {
-  background-color: #086375;
+  background-color: #55678b;
+}
+#calc-button {
+  border-bottom-right-radius: 16px;
+  background-color: #cf76e5;
 }
