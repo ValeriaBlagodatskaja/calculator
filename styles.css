@@ -33,6 +33,7 @@ body {
   align-items: center;
   display: flex;
   color: white;
+  overflow: hidden;
 }
 
 .displayText {
